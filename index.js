@@ -84,6 +84,7 @@ app.post('/shortUrl', (req, res) => {
                     return res.status(500).send("Update error");
                 }
             });
+
             getLinks(req, res);
         }
     });
@@ -100,6 +101,10 @@ app.get('/:shortUrl', (req, res) => {
         }
 
         const longUrl = results[0].longUrl;
+        db.query(
+            "UPDATE url SET count = count + 1, lastClicked = NOW() WHERE shortUrl = ?",
+            [shortUrl]
+        );
         res
             .status(302)
             .header("Location", longUrl)
@@ -107,6 +112,8 @@ app.get('/:shortUrl', (req, res) => {
 
     });
 });
+
+
 app.get('/delete/:id', (req, res) => {
     const id = req.params.id;
 
@@ -118,13 +125,6 @@ app.get('/delete/:id', (req, res) => {
 
         res.redirect('/');
 
-    });
-});
-app.get('/healthz', (req, res) => {
-    res.status(200).json({
-        ok: true,
-        version: "1.0",
-        uptime: process.uptime()
     });
 });
 

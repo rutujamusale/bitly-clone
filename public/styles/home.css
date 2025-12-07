@@ -1,0 +1,85 @@
+/* ---------- GENERAL ---------- */
+body {
+    background: #f7f9fc !important;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #333 !important;
+}
+
+/* ---------- HEADER ---------- */
+body header.container {
+    text-align: center !important;
+    padding: 40px 10px !important;
+}
+
+body header h1 {
+    font-size: 2.4rem !important;
+    font-weight: 700 !important;
+    color: #222 !important;
+    margin-bottom: 10px !important;
+}
+
+body header p {
+    font-size: 1.1rem !important;
+    color: #555 !important;
+}
+
+/* ---------- MAIN SECTION ---------- */
+.url-shortener {
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    padding: 30px !important;
+    max-width: 600px !important;
+    margin: 40px auto !important;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.07) !important;
+    border: 1px solid #e7e7e7 !important;
+}
+
+.url-shortener h2 {
+    text-align: center !important;
+    margin-bottom: 25px !important;
+    font-size: 1.8rem !important;
+    font-weight: 600 !important;
+    color: #333 !important;
+}
+
+/* ---------- INPUT ---------- */
+.url-shortener input.form-control {
+    height: 45px !important;
+    border-radius: 8px !important;
+    border: 1px solid #d1d1d1 !important;
+    transition: all 0.2s ease !important;
+    font-size: 2rem !important;
+}
+
+.url-shortener input.form-control:focus {
+    border-color: #007bff !important;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.3) !important;
+}
+
+/* ---------- BUTTON ---------- */
+.url-shortener input[type="submit"] {
+    background: #007bff !important;
+    color: white !important;
+    border-radius: 8px !important;
+    /* font-size: 1rem !important; */
+    font-weight: 600 !important;
+    height: 45px !important;
+    cursor: pointer !important;
+    transition: 0.2s ease-in-out !important;
+}
+
+.url-shortener input[type="submit"]:hover {
+    background: #005ad1 !important;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background: transparent !important;
+    text-align: center !important;
+    padding: 25px 10px !important;
+    margin-top: 40px !important;
+    color: #777 !important;
+    font-size: 0.95rem !important;
+}

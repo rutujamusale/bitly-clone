@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Bitly Clone</title>
+
+    <!-- Correct static file path -->
+    <link rel="stylesheet" href="/styles/home.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+
+<body>
+    <header class="container">
+        <h1>Welcome to Bitly Clone</h1>
+        <p>COnvert Long URL shortUrl URL with single click.</p>
+    </header>
+    <main>
+        <section class="url-shortener">
+            <h2>Shorten Your URL</h2>
+            <form action="/shortUrl" method="POST">
+                <div class="form-group">
+                    <input type="url" name="originalUrl" placeholder="Enter your URL here" required class="form-control"
+                        id="usr" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="form-control" value="Shorten URL" />
+                </div>
+            </form>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Bitly Clone. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

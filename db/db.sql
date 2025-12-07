@@ -5,7 +5,8 @@ create table
         id INT PRIMARY KEY AUTO_INCREMENT,
         longUrl VARCHAR(256) Not NULL,
         shortUrl VARCHAR(256) NOT NULL UNIQUE,
-        count INT DEFAULT 0
+        count INT DEFAULT 0,
+        lastClicked TIMESTAMP NULL
     );
 
 -- INSERT INTO

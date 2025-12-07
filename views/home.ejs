@@ -31,6 +31,49 @@
                     <input type="submit" class="form-control" value="Shorten URL" />
                 </div>
             </form>
+        </section>
+        <% if (results) { %>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Long URL</th>
+                        <th>Short URL</th>
+                        <th>Count</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% results.forEach(function(url) { %>
+                        <tr>
+                            <td>
+                                <a href="<%= url.longUrl %>" target="_blank">
+                                    <%= url.longUrl %>
+                                </a>
+                            </td>
+
+                            <td>
+                                <a href="/<%= url.shortUrl %>" target="_blank">
+                                    <%= url.shortUrl %>
+                                </a>
+                            </td>
+
+                            <td>
+                                <%= url.count %>
+                            </td>
+
+                            <td>
+                                <a href="/delete/<%= url.id %>" class="btn btn-danger"
+                                    onclick="return confirm('Delete this URL?')">
+                                    Delete
+                                </a>
+                            </td>
+                        </tr>
+                        <% }); %>
+                </tbody>
+            </table>
+            <% } %>
+
 
     </main>
     <footer>

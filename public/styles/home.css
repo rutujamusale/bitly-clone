@@ -83,3 +83,64 @@ footer {
     color: #777 !important;
     font-size: 0.95rem !important;
 }
+
+/* ---- Table Styling ---- */
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    font-size: 15px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table thead {
+    background: #4A90E2;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.table tbody tr:hover {
+    background-color: #f3f8ff;
+    transition: 0.2s;
+}
+
+/* Long URL + Short URL links */
+.table a {
+    /* color: #1d72b8; */
+    font-weight: 600;
+    word-break: break-all;
+}
+
+.table a:hover {
+    text-decoration: underline;
+}
+
+/* Delete Button */
+.btn-danger {
+    background-color: #e74c3c !important;
+    border: none !important;
+    padding: 6px 14px;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b !important;
+}
+
+/* Center table inside container */
+.url-shortener {
+    max-width: 900px;
+    margin: auto;
+}
